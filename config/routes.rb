@@ -21,5 +21,6 @@ resources :rooms, except: [:edit] do
       get 'location'
 
     end
+resources :photos, only: [:create , :destroy ]
 end
 end
