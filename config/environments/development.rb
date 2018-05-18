@@ -67,7 +67,7 @@ port: 587,
 enable_starttls_auto: true,
 authentication: 'plain',
 user_name: 'sameversa123@gmail.com',
-password: ' 123versa123'
+password: '123versa123'
 
 }
 end
