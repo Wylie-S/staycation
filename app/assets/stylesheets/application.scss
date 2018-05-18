@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
+
+///avatar
 .avatar_small{
 width: 25px;
 }
@@ -14,5 +16,37 @@ width: 65px;
 }
 
 .avatar_full{
+width: 100%;
+}
+
+
+body {
+color : black;
+background-color: white;
+font-family: fantasy;
+}
+
+a{
+color: blue;
+
+}
+.container{
+
+}
+///NAV
+.navbar_default{
+background-color: gray;
+}
+////BUTONS
+.btn{
+color :pink;
+border-radius: 5px;
+font-weight: bold;
+padding: 9px 27px
+}
+
+.btn-block{
+display: block;
+white-space: normal;
 width: 100%;
 }
