@@ -1,3 +1,12 @@
-//detroying tthe photos put on in photos/destroy.js ajax
+//destroythe uploaded pic and AJAX so check goes away 
 
 $('#photos').html("<%= j render 'photos_list' %>")
+<% if @room.photos.blank? %>
+  $('#photo_check').hide();
+<% end %>
+
+<% if !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? %>
+    $('#publish_button').attr('disabled', false);
+<% else %>
+    $('#publish_button').attr('disabled', true);
+<% end %>
