@@ -23,7 +23,6 @@ class RoomsController < ApplicationController
 
   def show
     @photos = @room.photos
-  
   end
 
   def listing
@@ -58,7 +57,7 @@ class RoomsController < ApplicationController
     redirect_back(fallback_location: request.referer)
   end
 
-  # --- Reservations ---
+  # --- Reservations only  ---
   def preload
     today = Date.today
     reservations = @room.reservations.where("start_date >= ? OR end_date >= ?", today, today)
@@ -87,7 +86,7 @@ class RoomsController < ApplicationController
       @room = Room.find(params[:id])
     end
 
-    def is_authorised
+    def is_authorized
       redirect_to root_path, alert: "You don't have permission" unless current_user.id == @room.user_id
     end
 

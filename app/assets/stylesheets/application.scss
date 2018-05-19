@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
+@import "jquery-ui/datepicker";
 
 body {
   color: #565a5c;
@@ -297,14 +298,14 @@ a {
 }
 
 .form-control.datepicker {
-  color: #00A699;
+  color:blue;
   background-color: white;
   border: 1px solid #00A699;
   text-align: center;
 }
 
 .message-alert {
-  color: #d43242;
+  color:pink;
   font-size: 14px;
   padding-top: 10px;
 }

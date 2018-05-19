@@ -9,8 +9,10 @@ gem 'rails', '~> 5.2.0'
 gem 'sqlite3'
 gem 'devise'
 gem 'geocoder'
+gem 'jquery-ui-rails', '~> 5.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -58,6 +60,7 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
+gem 'factory_girl_rails'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
