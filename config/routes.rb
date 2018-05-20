@@ -1,17 +1,12 @@
 Rails.application.routes.draw do
-
-root 'pages#home'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
+  root 'pages#home'
 
   devise_for :users,
              path: '',
-             path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration'},
-              controllers:{registration: 'registrations'}
+             path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration'}
 
-resources :users, only: [:show]
-resources :rooms, except: [:edit] do
+  resources :users, only: [:show]
+  resources :rooms, except: [:edit] do
     member do
       get 'listing'
       get 'pricing'
@@ -20,13 +15,17 @@ resources :rooms, except: [:edit] do
       get 'amenities'
       get 'location'
       get 'preload'
+      get 'preview'
     end
-resources :photos, only: [:create , :destroy ]
-resources :reservations, only: [:create]
+    resources :photos, only: [:create, :destroy]
+    resources :reservations, only: [:create]
+  end
 
+  resources :guest_reviews, only: [:create, :destroy]
+  resources :host_reviews, only: [:create, :destroy]
 
-end
-
-get '/your_trips' =>'reservations#your_trips'
+  get '/your_trips' => 'reservations#your_trips'
   get '/your_reservations' => 'reservations#your_reservations'
+
+  get 'search' => 'pages#search'
 end

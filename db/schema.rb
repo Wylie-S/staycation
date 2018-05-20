@@ -10,24 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_19_031716) do
-
-  create_table "models", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_models_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
-  end
+ActiveRecord::Schema.define(version: 2018_05_20_020232) do
 
   create_table "photos", force: :cascade do |t|
     t.integer "room_id"
@@ -51,6 +34,22 @@ ActiveRecord::Schema.define(version: 2018_05_19_031716) do
     t.datetime "updated_at", null: false
     t.index ["room_id"], name: "index_reservations_on_room_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "comment"
+    t.integer "star", default: 1
+    t.integer "room_id"
+    t.integer "reservations_id"
+    t.integer "guest_id"
+    t.integer "host_id"
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["guest_id"], name: "index_reviews_on_guest_id"
+    t.index ["host_id"], name: "index_reviews_on_host_id"
+    t.index ["reservations_id"], name: "index_reviews_on_reservations_id"
+    t.index ["room_id"], name: "index_reviews_on_room_id"
   end
 
   create_table "rooms", force: :cascade do |t|
