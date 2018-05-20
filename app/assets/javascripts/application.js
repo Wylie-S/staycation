@@ -18,3 +18,4 @@
 //= require activestorage
 //= require jquery-ui/datepicker
 //= require_tree .
+//= require jquery-ui/slider

@@ -4,25 +4,25 @@ class PagesController < ApplicationController
   end
 
   def search
-    # STEP 1
+#remember plac ein session
     if params[:search].present? && params[:search].strip != ""
       session[:loc_search] = params[:search]
     end
 
-    # STEP 2
+  #if nearby place display them or if not all of them
     if session[:loc_search] && session[:loc_search] != ""
       @rooms_address = Room.where(active: true).near(session[:loc_search], 5, order: 'distance')
     else
       @rooms_address = Room.where(active: true).all
     end
 
-    # STEP 3
+    # ransack gem goes thru the places with stuff you want
     @search = @rooms_address.ransack(params[:q])
     @rooms = @search.result
 
     @arrRooms = @rooms.to_a
 
-    # STEP 4
+    #see if the room is free for your dates and remove it from the array
     if (params[:start_date] && params[:end_date] && !params[:start_date].empty? &&  !params[:end_date].empty?)
 
       start_date = Date.parse(params[:start_date])

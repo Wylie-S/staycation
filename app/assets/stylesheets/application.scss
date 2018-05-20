@@ -1,37 +1,47 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
-@import "jquery-ui/datepicker";
 
-body {
-  color: #565a5c;
-  background-color: #F8F8F8;
-  font-family: "Varela Round", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+html, body {
+   max-width: 100%;
+   overflow-x: hidden;
 }
 
+body {
+  color:#CF6766;
+  background-image: url(sky.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+  font-family: "Varela Round", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+ max-width: 100%;
+    overflow-x: hidden;
+    }
+
 a {
-  color: #00A699;
+  color: #031424;
 }
 
 .container {
   width: 80%;
+//opacity: 0.8;
+  background-image: url(sky.jpg);
 }
 
 .text-babu, .icon-babu {
-  color: #00A699;
+  color: #031424;
 }
 
 .text-red, .icon-red {
-  color: #FF5A5F;
+  color: #031424;
 }
 
 // NAVBARS
 .navbar-default {
-  background-color: #FFFFFF;
+  background-color:#8EAEBD;
 }
 
 .navbar-default .navbar-brand {
-  color: #FF5A5F;
+  color: #8EAEBD;
   font-size: 2em;
   font-weight: 400;
 }
@@ -91,16 +101,6 @@ a {
   background-color: #066165;
 }
 
-.btn.btn-facebook {
-  border: 1px solid #3B5998;
-  background-color: #3B5998;
-}
-
-.btn.btn-facebook:active {
-  outline: none;
-  border-color: #2d467b;
-  background-color: #2d467b;
-}
 
 // PANELS
 .panel-default .panel-heading {
@@ -134,15 +134,15 @@ a {
 
 // AVATAR
 .avatar-small {
-  width: 28px;
+  width: 18px;
 }
 
 .avatar-medium {
-  width: 48px;
+  width: 28px;
 }
 
 .avatar-large {
-  width: 68px;
+  width: 48px;
 }
 
 .avatar-full {
@@ -221,7 +221,7 @@ a {
 .sidebar-item {
   padding: 10px 0;
   font-size: 16px;
-  color: #82888a;
+  color: lime;
 }
 
 .sidebar-link {
@@ -273,14 +273,14 @@ a {
 // ROOM SHOW
 .amenities li {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 14px;
   list-style-type: none;
 }
 
 .amenities .text-line-through {
   text-decoration: line-through;
   color: rgba(0,0,0,0.45);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 // RESERVATIONS
@@ -292,20 +292,20 @@ a {
 }
 
 .reservation-table .total td {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   border: none;
 }
 
 .form-control.datepicker {
-  color:blue;
+  color: salmon;
   background-color: white;
   border: 1px solid #00A699;
   text-align: center;
 }
 
 .message-alert {
-  color:pink;
+  color: #yellow;
   font-size: 14px;
   padding-top: 10px;
 }
@@ -318,7 +318,7 @@ a {
 
 #left {
   padding: 10px 400px 10px 20px;
-  overflow: scroll;
+  overflow: hidden;
   height: 100%;
 }
 
@@ -339,9 +339,10 @@ a {
 
 // HOME PAGE
 .discovery-card {
-  background-size: cover;
+  background-size: auto;
   background-position: center;
-  height: 326px;
+  height: 256px;
+
 }
 
 .banner {
