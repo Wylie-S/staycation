@@ -57,7 +57,7 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group select">
-                    <label>Accommodate</label>
+                    <label>Accommodates</label>
                     <%= f.select :accomodate_gteq, [["1", 1], ["2", 2], ["3", 3], ["4+", 4]], id: "accommodate", prompt: "Select...", class: "form-control" %>
                   </div>
                 </div>
@@ -114,11 +114,11 @@
     <!-- GOOGLE MAP WILL BE HERE -->
 
     <div id="map" style="width: 100%; height: 100%"></div>
-
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <!--<script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYtJ2XkA91ywN_51MvRk53h1a1eJIrWzk&callback=initMap"></script>-->
+  -<script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
         function initialize(rooms) {
-          var location = {lat: 44.5403, lng: -78.5463}
+          var location = {lat: -33.8688, lng: 151.2195}
 
           if (rooms.length > 0) {
             location = {lat: rooms[0].latitude, lng: rooms[0].longitude}
@@ -155,7 +155,7 @@
 
 <script>
   $('#start_date').datepicker({
-    dateFormat: 'mm-dd-yy',
+    dateFormat: 'dd-mm-yyyy',
     minDate: 0,
     maxDate: '3m',
     onSelect: function(selected) {
@@ -165,7 +165,7 @@
   });
 
   $('#end_date').datepicker({
-    dateFormat: 'mm-dd-yy',
+    dateFormat: 'dd-mm-yyyy',
     minDate: 0,
     maxDate: '3m',
     onSelect: function(selected) {

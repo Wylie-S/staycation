@@ -14,6 +14,9 @@ class PagesController < ApplicationController
       @rooms_address = Room.where(active: true).near(session[:loc_search], 5, order: 'distance')
     else
       @rooms_address = Room.where(active: true).all
+
+
+
     end
 
     # ransack gem goes thru the places with stuff you want

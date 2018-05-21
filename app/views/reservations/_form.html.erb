@@ -67,7 +67,7 @@
         });
 
         $('#reservation_start_date').datepicker({
-          dateFormat: 'mm-dd-yy',
+          dateFormat: 'dd-mm-yy',
           minDate: 0,
           maxDate: '3m',
           beforeShowDay: checkDate,
@@ -77,7 +77,7 @@
 
             var start_date = $('#reservation_start_date').datepicker('getDate');
             var end_date = $('#reservation_end_date').datepicker('getDate');
-            var nights = (end_date - start_date)/1000/60/60/24+ 1;
+            var nights = (end_date - start_date)/1000/60/60/24 + 1;
 
             var input = {
               'start_date': start_date,
@@ -85,7 +85,7 @@
             }
 
             $.ajax({
-              url: '<%= preload_room_path(@room) %>',
+              url: '<%= preview_room_path(@room) %>',
               data: input,
               success: function(data) {
 
@@ -109,7 +109,7 @@
         });
 
         $('#reservation_end_date').datepicker({
-          dateFormat: 'mm-dd-yy',
+          dateFormat: 'dd-mm-yy',
           minDate: 0,
           maxDate: '3m',
           beforeShowDay: checkDate,
@@ -126,12 +126,12 @@
             }
 
             $.ajax({
-              url: '<%= preload_room_path(@room) %>',
+              url: '<%= preview_room_path(@room) %>',
               data: input,
               success: function(data) {
 
                 if(data.conflict) {
-                  $('#message').text("These dates are already booked.");
+                  $('#message').text("These dates are not available.");
                   $('#preview').hide();
                   $('#btn_book').attr('disabled', true);
                 } else {

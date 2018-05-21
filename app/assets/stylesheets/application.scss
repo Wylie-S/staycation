@@ -273,11 +273,19 @@ color: #lime;
 
 .panel-heading.preview {
   padding: 0;
+
 }
 
 .panel-heading.preview img {
-  width: 100%;
+    width: 100%;
+    position: relative;
+display:inline-block;
+    width:  200px;
+    height: 200px;
+    background-repeat:   no-repeat;
+    background-size:     cover;
 }
+
 
 // ROOM SHOW
 .amenities li {
@@ -350,12 +358,16 @@ opacity: 0.9;
 }
 
 //pics at the bottom
-.discovery-card {
+.place {
   background-size: auto;
   background-position: center;
   height: 256px;
-
+ white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
+
+
 
 .banner {
   margin-top: 50px;
