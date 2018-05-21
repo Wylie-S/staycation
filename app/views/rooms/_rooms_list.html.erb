@@ -1,8 +1,9 @@
 <% rooms.each do |room| %>
-    <div class="col-md-4">
+    <div class="column">
       <div class="panel panel-default">
         <div class="panel-heading preview">
           <%= image_tag room.cover_photo(:medium) %>
+<p></p>
         </div>
         <div class="panel-body">
           <%= link_to room.listing_name, room %><br/>
@@ -11,5 +12,5 @@
       </div>
     </div>
 
-  
+
 <% end %>

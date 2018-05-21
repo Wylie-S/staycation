@@ -134,12 +134,12 @@
   <script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYtJ2XkA91ywN_51MvRk53h1a1eJIrWzk&callback=initMap"></script>
     <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
     <script>
-    
+
           function initialize() {
             var location = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};
             var map = new google.maps.Map(document.getElementById('map'), {
               center: location,
-              zoom: 14
+              zoom: 10
             });
 
             var marker = new google.maps.Marker({

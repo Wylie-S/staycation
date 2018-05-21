@@ -18,10 +18,12 @@ background-repeat: no-repeat;
     }
 p{
 color: black;
+font-size: 23px;
 }
 
 a {
   color: #ff3300;
+
 }
 
 .toast-message{
@@ -125,13 +127,14 @@ color: #lime;
 }
 
 .row-space-2 {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .row-space-3 {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 6px;
+  margin-bottom:6px;
+display: block;
 }
 
 .description {
@@ -217,7 +220,7 @@ color: #lime;
   position: absolute;
   font-size: 0.95em;
   text-align: center;
-  width: 1.25em;
+  width: 1.15em;
   color: #ff3300;
 }
 
@@ -281,7 +284,7 @@ color: #lime;
     position: relative;
 display:inline-block;
     width:  200px;
-    height: 200px;
+
     background-repeat:   no-repeat;
     background-size:     cover;
 }
@@ -292,12 +295,14 @@ display:inline-block;
   margin-bottom: 10px;
   font-size: 14px;
   list-style-type: none;
+color: lime;
 }
 
 .amenities .text-line-through {
   text-decoration: line-through;
-  color: rgba(0,0,0,0.45);
+  /*color: rgba(0,0,0,0.45);*/
   font-size: 18px;
+  color:lime;
 }
 
 // RESERVATIONS
@@ -362,9 +367,7 @@ opacity: 0.9;
   background-size: auto;
   background-position: center;
   height: 256px;
- white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
+display: inline-block;
 }
 
 
