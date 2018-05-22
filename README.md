@@ -17,5 +17,5 @@ https://www.youtube.com/results?search_query=aitbnb+tutorial+clon+e
 https://www.youtube.com/watch?v=zJYuLebl-Js&t=927s
 https://www.youtube.com/watch?v=rJduarvfWlE
 
-![](staycation.gif)
+![](stay1.gif)
 
