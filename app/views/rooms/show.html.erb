@@ -14,12 +14,12 @@
     <!-- Listing Name -->
     <div class="row">
       <div class="col-md-8">
-        <h1><%= @room.listing_name %></h1>
-        <%= @room.address %>
+        <h1>Listing Name:<%= @room.listing_name %></h1>
+      <hi>Listing Location : <%= @room.address %></h1>
       </div>
       <div class="col-md-4 text-center">
         <%= image_tag avatar_url(@room.user), class: "img-circle avatar-large" %><br/><br/>
-        <%= @room.user.fullname %>
+        <hi> Listing Owner:<%= @room.user.fullname %></h1>
       </div>
     </div>
     <hr/>
@@ -54,7 +54,7 @@
     <!-- About -->
     <div class="row">
       <div class="col-md-12">
-        <h3>About This Listing</h3>
+        <h3>About This Listing:</h3>
         <p><%= @room.summary %></p>
       </div>
     </div>
@@ -63,7 +63,7 @@
     <!-- Amenities -->
     <div class="row">
       <div class="col-md-3">
-        <h4>Amenities</h4>
+        <h4>Amenities:</h4>
       </div>
 
       <div class="col-md-9">
