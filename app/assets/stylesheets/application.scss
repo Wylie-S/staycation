@@ -25,6 +25,9 @@ a {
   color: #ff3300;
 
 }
+h1{
+text-align: center;
+}
 
 .toast-message{
 background-color:#99ccff;
@@ -45,10 +48,17 @@ color:black;
   color: #ff3300;
 }
 
+
 // NAVBARS
+.navbar-header{
+    height: 146px;
+
+}
+
 .navbar-default {
   background-color:#8EAEBD;
 color: #lime;
+
 }
 
 .navbar-default .navbar-brand {
@@ -72,8 +82,9 @@ color: #lime;
 }
 
 .btn-small {
-  padding: 5px 15px;
-  margin-top: 15px;
+    padding: 9px 15px;
+    margin-top: 60px;
+    margin-right: -196px;
 }
 
 .btn:hover, .btn:focus {
@@ -372,11 +383,11 @@ display: inline-block;
 
 
 
-.banner {
+/*.banner {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-///home
+///home*/
 
 .home  {
   background-size: contain;
@@ -391,4 +402,57 @@ opacity: 0.5;
 
 h3{
 color: #ff3300;
+}
+
+.column{
+    display: inline-flex;
+
+
+}
+.copyright{
+font-size: 10px;
+color: black;
+margin-left: 10px;
+}
+
+.dropdown{
+
+}
+.statement{
+text-align: center;
+    text-align: center;
+    position: relative;
+    top: -133px;
+    left: 650px;
+}
+.dropdown-toggle{
+margin: 324px 369px;
+    margin: 324px 369px;
+    position: relative;
+    top: 39px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    left: 458px;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    opacity: 0.5;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    /* -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); */
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); */
+    /* background-clip: padding-box*/
+}
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
