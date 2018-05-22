@@ -22,5 +22,9 @@
 	<div class="col-md-9"</div>
 <h2><%= @user.fullname %></h2>
 <div class="description row-space-3">
+<div class="form-group">
+	<%= text_area :description, rows: 5, cols: 25, autofocus: true, placeholder: "Description" %>
+</div>
+
 <%= @user.description %>
 </div>
