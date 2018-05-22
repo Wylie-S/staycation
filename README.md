@@ -1,25 +1,18 @@
-# README
+Clone repo and bundle install on command line
+You will need to log in to use but you can view current listings without logging in .
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+RUBY ON RAILS 
+GOOGLE API 
+DEVISE GEM FOR VERIFICATION 
+JAVASCRIPT
+JQUERY 
+JSON 
+AJAX 
 
-Things you may want to cover:
+This application allows you to list and reserve homes / apartments to stay at across the nation 
 
-* Ruby version
+Tutorials used :
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# staycation
+https://www.youtube.com/results?search_query=aitbnb+tutorial+clon+e
+https://www.youtube.com/watch?v=zJYuLebl-Js&t=927s
+https://www.youtube.com/watch?v=rJduarvfWlE
